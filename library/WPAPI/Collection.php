@@ -3,14 +3,14 @@
  * Collection base interface
  *
  * @package WordPress API Client
- * @subpackage Entities
+ * @subpackage Collections
  */
 
 /**
  * Collection base interface
  *
  * @package WordPress API Client
- * @subpackage Entities
+ * @subpackage Collections
  */
 interface WPAPI_Collection {
 	public function getAll();
