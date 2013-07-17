@@ -13,3 +13,14 @@ libraries.)
 
 [license]: https://github.com/rmccue/WP-API-Client/blob/master/LICENSE
 [Requests]: http://requests.ryanmccue.info/
+
+
+Running the Tests
+-----------------
+To run the API test suite, simply execute the following:
+
+	$ cd tests/
+	$ phpunit
+
+You can also add `Client` or `Server` after `phpunit` to test a single component
+from these.
