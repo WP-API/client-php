@@ -110,8 +110,7 @@ class WPAPI_Post {
 		$response = Requests::put($this->meta['links']['self'], $headers, $body, $this->api->getDefaultOptions());
 		$response->throw_for_status();
 
-		$data = json_decode($response->body, true);
-		$this->data = $data['data'];
+		$this->data = json_decode($response->body, true);
 		$this->changed = array();
 
 		return true;
