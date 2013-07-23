@@ -1,4 +1,6 @@
 <?php
+require '../vendor/autoload.php';
+
 require '../library/WPAPI.php';
 WPAPI::register_autoloader();
 

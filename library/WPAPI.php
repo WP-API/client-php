@@ -57,7 +57,7 @@ class WPAPI {
 	 */
 	public static function autoloader($class) {
 		// Check that the class starts with "Requests"
-		if (strpos($class, 'WPAPI') !== 0 && strpos($class, 'Requests') !== 0) {
+		if (strpos($class, 'WPAPI') !== 0) {
 			return;
 		}
 
