@@ -42,6 +42,17 @@ class WPAPI_Index {
 	}
 
 	/**
+	 * Get the raw internal post data
+	 *
+	 * Avoid use in favour of accessing via the properties instead.
+	 *
+	 * @return array Raw data from the API
+	 */
+	public function getRawData() {
+		return $this->data;
+	}
+
+	/**
 	 * Fetch the index data
 	 *
 	 * @throws Requests_Exception Failed to retrieve the index

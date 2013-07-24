@@ -72,6 +72,17 @@ class WPAPI_Post {
 	}
 
 	/**
+	 * Get the raw internal post data
+	 *
+	 * Avoid use in favour of accessing via the properties instead.
+	 *
+	 * @return array Raw data from the API
+	 */
+	public function getRawData() {
+		return $this->data;
+	}
+
+	/**
 	 * Update the post
 	 *
 	 * @throws Requests_Exception Failed to update the post
