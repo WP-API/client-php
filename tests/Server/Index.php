@@ -6,6 +6,11 @@ class WPAPI_Test_Server_Index extends WPAPI_Test_Server {
 
 		$this->index = $this->api->index;
 	}
+
+	public function testAgainstSchema() {
+		$this->checkEntityAgainstSchema($this->index->getRawData(), 'index');
+	}
+
 	public function testBasicInformation() {
 		$this->assertNotEmpty($this->index->name);
 		$this->assertNotEmpty($this->index->description);

@@ -14,6 +14,10 @@ class WPAPI_Test_Server_Post extends WPAPI_Test_Server {
 		$this->assertInstanceOf('WPAPI_Post', $this->post);
 	}
 
+	public function testAgainstSchema() {
+		$this->checkEntityAgainstSchema($this->post->getRawData(), 'post');
+	}
+
 	public function testProperties() {
 		$this->assertNotEmpty($this->post->title);
 		$this->assertEquals('API Test Post', $this->post->title);
