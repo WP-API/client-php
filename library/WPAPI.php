@@ -34,7 +34,9 @@ class WPAPI {
 	// This is very un-HATEOAS, but it also means one less request
 	const ROUTE_INDEX = '/';
 	const ROUTE_POSTS = '/posts';
-	const ROUTE_POST = '/post/%d';
+	const ROUTE_POST = '/posts/%d';
+	const ROUTE_MEDIA = '/media';
+	const ROUTE_POST = '/media/%d';
 
 	/**
 	 * Constructor
