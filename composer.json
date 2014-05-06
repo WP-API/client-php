@@ -3,7 +3,7 @@
 	"description": "Client for the WordPress JSON REST API",
 	"license": "GPL",
 	"require": {
-		"rmccue/requests": "dev-master",
+		"rmccue/requests": "~v1.6"
 		"justinrainbow/json-schema": "dev-master"
 	}
 }
