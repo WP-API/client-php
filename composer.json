@@ -1,4 +1,7 @@
 {
+	"name": "WP-API/client",
+	"description": "Client for the WordPress JSON REST API",
+	"license": "GPL",
 	"require": {
 		"rmccue/requests": "dev-master",
 		"justinrainbow/json-schema": "dev-master"
