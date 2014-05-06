@@ -1,5 +1,5 @@
 {
-	"name": "WP-API/client",
+	"name": "wp-api/client",
 	"description": "Client for the WordPress JSON REST API",
 	"license": "GPL",
 	"require": {
