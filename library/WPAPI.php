@@ -37,6 +37,8 @@ class WPAPI {
 	const ROUTE_POST = '/posts/%d';
 	const ROUTE_MEDIA = '/media';
 	const ROUTE_POST = '/media/%d';
+	const ROUTE_USERS = '/users';
+	const ROUTE_USER = '/users/%d';
 
 	/**
 	 * Constructor
