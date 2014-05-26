@@ -1,4 +1,10 @@
 <?php
+/**
+ * Users collection
+ *
+ * @package WordPress API Client
+ * @subpackage Collections
+ */
 
 /**
  * Users collection
@@ -25,9 +31,9 @@ class WPAPI_Users implements WPAPI_Collection {
 	}
 
 	/**
-	 * Get all posts
+	 * Get all users
 	 *
-	 * @return array List of WPAPI_Post objects
+	 * @return array List of WPAPI_User objects
 	 */
 	public function getAll() {
 
