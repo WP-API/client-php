@@ -36,7 +36,7 @@ class WPAPI {
 	const ROUTE_POSTS = '/posts';
 	const ROUTE_POST = '/posts/%d';
 	const ROUTE_MEDIA = '/media';
-	const ROUTE_POST = '/media/%d';
+	const ROUTE_MEDIA_SINGLE = '/media/%d';
 
 	/**
 	 * Constructor
