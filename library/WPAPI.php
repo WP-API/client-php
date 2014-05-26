@@ -36,7 +36,7 @@ class WPAPI {
 	const ROUTE_POSTS = '/posts';
 	const ROUTE_POST = '/posts/%d';
 	const ROUTE_MEDIA = '/media';
-	const ROUTE_POST = '/media/%d';
+	const ROUTE_MEDIA_SINGLE = '/media/%d';
 	const ROUTE_USERS = '/users';
 	const ROUTE_USER = '/users/%d';
 
@@ -113,6 +113,13 @@ class WPAPI {
 			$options['auth'] = $this->auth;
 
 		return $options;
+	}
+
+	/**
+	 * Set authentication parameter
+	 */
+	public function setAuth( $auth ) {
+		$this->auth = $auth;
 	}
 
 	/**#@+
