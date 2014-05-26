@@ -90,6 +90,7 @@ class WPAPI {
 		$classes = array(
 			'index' => 'WPAPI_Index',
 			'posts' => 'WPAPI_Posts',
+			'users' => 'WPAPI_Users',
 		);
 
 		if (!isset($classes[$key])) {
