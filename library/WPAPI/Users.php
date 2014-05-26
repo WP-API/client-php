@@ -68,6 +68,27 @@ class WPAPI_Users implements WPAPI_Collection {
 	}
 
 	/**
+	 * Get the current user
+	 *
+	 * @throws Requests_Exception Failed to retrieve the user
+	 * @throws Exception Failed to decode JSON
+	 * @return WPAPI_User
+	 */
+	public function getCurrent() {
+		$response = $this->api->get( WPAPI::ROUTE_USER_CURRENT );
+		$response->throw_for_status();
+
+		$data = json_decode( $response->body, true );
+
+		$has_error = ( function_exists('json_last_error') && json_last_error() !== JSON_ERROR_NONE );
+		if ( ( ! $has_error && $data === null ) || $has_error ) {
+			throw new Exception( $response->body );
+		}
+
+		return new WPAPI_User( $this->api, $data );
+	}
+
+	/**
 	 * Create a new user
 	 *
 	 * @throws Requests_Exception Failed to retrieve the user

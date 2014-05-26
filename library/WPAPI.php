@@ -39,6 +39,7 @@ class WPAPI {
 	const ROUTE_MEDIA_SINGLE = '/media/%d';
 	const ROUTE_USERS = '/users';
 	const ROUTE_USER = '/users/%d';
+	const ROUTE_USER_CURRENT = '/users/me';
 
 	/**
 	 * Constructor
