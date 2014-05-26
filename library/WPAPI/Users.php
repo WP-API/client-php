@@ -52,8 +52,12 @@ class WPAPI_Users implements WPAPI_Collection {
 	 * @param int $id User ID
 	 * @return WPAPI_User
 	 */
-	public function get($id) {
+	public function get($id, $will_edit = false) {
 		$url = sprintf( WPAPI::ROUTE_USER, $id );
+		if ($will_edit) {
+			$url .= '?context=edit';
+		}
+
 		$response = $this->api->get( $url );
 		$response->throw_for_status();
 
@@ -74,8 +78,12 @@ class WPAPI_Users implements WPAPI_Collection {
 	 * @throws Exception Failed to decode JSON
 	 * @return WPAPI_User
 	 */
-	public function getCurrent() {
-		$response = $this->api->get( WPAPI::ROUTE_USER_CURRENT );
+	public function getCurrent($will_edit = false) {
+		$url = WPAPI::ROUTE_USER_CURRENT;
+		if ($will_edit) {
+			$url .= '?context=edit';
+		}
+		$response = $this->api->get( $url );
 		$response->throw_for_status();
 
 		$data = json_decode( $response->body, true );
