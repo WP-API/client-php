@@ -113,6 +113,13 @@ class WPAPI {
 		return $options;
 	}
 
+	/**
+	 * Set authentication parameter
+	 */
+	public function setAuth( $auth ) {
+		$this->auth = $auth;
+	}
+
 	/**#@+
 	 * Requests proxy functions
 	 *
