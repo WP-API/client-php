@@ -37,6 +37,9 @@ class WPAPI {
 	const ROUTE_POST = '/posts/%d';
 	const ROUTE_MEDIA = '/media';
 	const ROUTE_MEDIA_SINGLE = '/media/%d';
+	const ROUTE_USERS = '/users';
+	const ROUTE_USER = '/users/%d';
+	const ROUTE_USER_CURRENT = '/users/me';
 
 	/**
 	 * Constructor
@@ -87,6 +90,7 @@ class WPAPI {
 		$classes = array(
 			'index' => 'WPAPI_Index',
 			'posts' => 'WPAPI_Posts',
+			'users' => 'WPAPI_Users',
 		);
 
 		if (!isset($classes[$key])) {
