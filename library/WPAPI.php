@@ -133,8 +133,8 @@ class WPAPI {
 	/**
 	 * Send a GET request
 	 */
-	public function get($endpoint, $headers = array(), $options = array()) {
-		return $this->request($endpoint, $headers, array(), Requests::GET, $options);
+	public function get($endpoint, $headers = array(), $data = array(), $options = array()) {
+		return $this->request($endpoint, $headers, $data, Requests::GET, $options);
 	}
 	/**
 	 * Send a HEAD request
