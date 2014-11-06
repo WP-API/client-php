@@ -95,6 +95,9 @@ abstract class WPAPI_Object {
 	public function update($data = array(), $use_json = true, $check_modification = true) {
 		$keys = array_keys( $this->changed );
 		$values = array();
+		foreach ($keys as $k) {
+			$values[$k] = $this->data[$k];
+		}
 
 		if ( ! empty( $data ) ) {
 			$values = array_merge( $values, array_diff_assoc($data, $this->data) );
