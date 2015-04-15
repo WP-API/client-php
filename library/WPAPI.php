@@ -162,10 +162,10 @@ class WPAPI {
 		return $this->request($endpoint, $headers, $data, Requests::PUT, $options);
 	}
 	/**
-	 * Send a PUT request
+	 * Send a PATCH request
 	 */
 	public function patch($endpoint, $headers, $data = array(), $options = array()) {
-		return $this->request($endpoint, $headers, $data, Requests::PUT, $options);
+		return $this->request($endpoint, $headers, $data, Requests::PATCH, $options);
 	}
 
 	/**
